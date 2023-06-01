@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "public": "build/web",
+    "site":"pradeephr",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

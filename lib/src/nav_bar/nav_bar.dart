@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_next/constants/enums.dart';
+import 'package:flutter_next/extensions/animation_extension.dart';
 
 import '../theme/theme_button.dart';
 import 'nav_bar_btn.dart';
@@ -14,7 +16,8 @@ class NavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Card(
+      elevation: 20,
       color: Theme.of(context).scaffoldBackgroundColor,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -60,6 +63,8 @@ class NavBar extends StatelessWidget {
           )
         ],
       ),
-    );
+    ).fadeIn(
+        variant: NextFadeInVariant.fadeInBottom,
+        duration: const Duration(milliseconds: 800));
   }
 }

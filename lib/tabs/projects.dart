@@ -23,7 +23,8 @@ class Projects extends StatelessWidget {
             return Column(
               children: List.generate(data.length, (int i) {
                 return Container(
-                  padding: EdgeInsets.fromLTRB(30.0, 0.0, 30.0, height * 0.05),
+                  padding:
+                      EdgeInsets.fromLTRB(30.0, 0.0, 30.0, height * 0.05),
                   child: ProjectsCard(
                     title: data[i][0],
                     techStack: data[i][1],
@@ -38,7 +39,9 @@ class Projects extends StatelessWidget {
             int storage = -1;
             return Column(
               children: List.generate(
-                data.length % 3 == 0 ? data.length ~/ 3 : data.length ~/ 3 + 1,
+                data.length % 3 == 0
+                    ? data.length ~/ 3
+                    : data.length ~/ 3 + 1,
                 (int i) => Padding(
                   padding: EdgeInsets.only(bottom: width * 0.03),
                   child: Row(

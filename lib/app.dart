@@ -21,8 +21,7 @@ class App extends StatelessWidget {
             child: const ThemeButton(),
           ),
           body: ScrollablePositionedList.builder(
-              physics: const BouncingScrollPhysics(),
-              minCacheExtent: double.infinity,
+              physics: const ScrollPhysics(),
               shrinkWrap: true,
               itemCount: 7,
               itemScrollController: scroll,
@@ -32,19 +31,17 @@ class App extends StatelessWidget {
         );
       } else {
         return Scaffold(
-          appBar: PreferredSize(
-              preferredSize: Size(width, height * 0.07),
-              child: const NavBar(isDarkModeBtnVisible: true)),
-          body: ScrollablePositionedList.builder(
-              physics: const BouncingScrollPhysics(),
-              minCacheExtent: double.infinity,
-              shrinkWrap: true,
-              itemCount: 7,
-              itemScrollController: scroll,
-              itemBuilder: (context, index) {
-                return widgetList[index];
-              }),
-        );
+            appBar: PreferredSize(
+                preferredSize: Size(width, height * 0.07),
+                child: const NavBar(isDarkModeBtnVisible: true)),
+            body: ScrollablePositionedList.builder(
+                physics: const ScrollPhysics(),
+                shrinkWrap: true,
+                itemCount: 7,
+                itemScrollController: scroll,
+                itemBuilder: (context, index) {
+                  return widgetList[index];
+                }));
       }
     });
   }

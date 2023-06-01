@@ -12,22 +12,18 @@ class Resume extends StatelessWidget {
 
   final double width;
 
-  final String data = resume();
+
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: data == ''
-            ? EdgeInsets.zero
-            : EdgeInsets.only(right: width * 0.019),
-        child: Visibility(
-          visible: data != '',
-          child: TextButton(
-              onPressed: () => htmlOpenLink(data),
-              child: CustomText(
-                  text: 'MY RESUME',
-                  fontSize: 20,
-                  color: Theme.of(context).primaryColor)),
-        ));
+        padding: EdgeInsets.only(right: width * 0.019),
+        child: FilledButton(
+            onPressed: () => htmlOpenLink(
+                "https://docs.google.com/document/d/1t9o8oOG6_pYX7FwFKyXfQ-k3LJuOpEdaCL7bXxl5anY/edit?usp=sharing/export?format=pdf"),
+            child: CustomText(
+                text: 'MY RESUME',
+                fontSize: 20,
+                color: Theme.of(context).secondaryHeaderColor)));
   }
 }

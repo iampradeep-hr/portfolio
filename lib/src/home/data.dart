@@ -1,8 +1,6 @@
 import '../json_service.dart';
 
-String about() {
-  return JSONService.response['about'].toString();
-}
+
 
 String resume() {
   return JSONService.response['resume_download_link'].toString();

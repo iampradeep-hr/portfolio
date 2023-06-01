@@ -30,17 +30,11 @@ class SocialMediaBar extends StatelessWidget {
               return IconButton(
                   iconSize: 50.0,
                   hoverColor: Colors.transparent,
-                  icon: (data[i][1] != '' &&
-                          currentSupportedSocialMedia.contains(data[i][1]))
-                      ? SocialMediaButton(
+                  icon:SocialMediaButton(
                           image: 'assets/home/constant/${data[i][1]}.png',
                           link: data[i][0],
-                          height: height)
-                      : SocialMediaButton(
-                          image: 'assets/home/constant/link.png',
-                          link: data[i][0],
-                          height: height,
-                        ),
+                          height: height),
+                      
                   onPressed: () {
                     htmlOpenLink(data[i][0]);
                   });

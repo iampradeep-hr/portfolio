@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_next/constants/enums.dart';
+import 'package:flutter_next/extensions/animation_extension.dart';
 import '../src/home/about.dart';
-import '../src/home/data.dart';
 import '../src/home/designation.dart';
 import '../src/home/introduction.dart';
 import '../src/home/my_name.dart';
@@ -23,7 +24,7 @@ class _HomePageState extends State<HomePage> {
       Future.microtask(() {
         SystemChrome.setApplicationSwitcherDescription(
             ApplicationSwitcherDescription(
-          label: 'Meet ${name().split(' ').first}',
+          label: 'Meet Pradeep',
           primaryColor: Colors.black.value,
         ));
       });
@@ -46,9 +47,9 @@ class _HomePageState extends State<HomePage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: EdgeInsets.only(top: height * 0.07),
+                    padding: EdgeInsets.only(top: height * 0.03),
                     child: const Introduction(
-                        word: 'Hello,\nI am', textScaleFactor: 3),
+                        word: "Hi, नमस्ते(Namaste), I'm", textScaleFactor: 2.5),
                   ),
                   MyName(
                     isMobile: true,
@@ -58,7 +59,7 @@ class _HomePageState extends State<HomePage> {
                   SocialMediaBar(
                     height: height,
                   ),
-                  About(fontSize: 24),
+                  const About(fontSize: 20),
                   Padding(
                     padding: EdgeInsets.only(bottom: height * 0.029),
                     child: OverflowBar(
@@ -75,7 +76,7 @@ class _HomePageState extends State<HomePage> {
           } else {
             return Padding(
               padding:
-                  EdgeInsets.only(top: height * 0.08, bottom: height * 0.07),
+                  EdgeInsets.only(top: height * 0.03, bottom: height * 0.07),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -85,7 +86,8 @@ class _HomePageState extends State<HomePage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const Introduction(
-                            word: 'Hello, I am', textScaleFactor: 3.5),
+                            word: "Hi, नमस्ते(Namaste), I'm",
+                            textScaleFactor: 3.5),
                         FittedBox(
                             fit: BoxFit.cover,
                             child: MyName(
@@ -96,7 +98,7 @@ class _HomePageState extends State<HomePage> {
                         SocialMediaBar(
                           height: height,
                         ),
-                        About(fontSize: 30),
+                        const About(fontSize: 25),
                         Padding(
                           padding: EdgeInsets.only(bottom: height * 0.026),
                           child: Row(
@@ -115,7 +117,9 @@ class _HomePageState extends State<HomePage> {
             );
           }
         }),
-      ),
+      ).fadeIn(
+          variant: NextFadeInVariant.fadeInRight,
+          duration: const Duration(milliseconds: 800)),
     );
   }
 }

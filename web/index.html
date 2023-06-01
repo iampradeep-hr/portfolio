@@ -6,7 +6,7 @@
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="Portfolio web-app using Flutter.">
+  <meta name="description" content="Portfolio web-app using Flutter">
 
   <link rel="stylesheet" href="style.css">
 
@@ -26,17 +26,28 @@
   <!-- SOLAR SYSTEM -->
   <div class="spinner-box">
     <div class="solar-system">
-      <div class="earth-orbit orbit">
-        <div class="planet earth"></div>
-        <div class="venus-orbit orbit">
-          <div class="planet venus"></div>
-          <div class="mercury-orbit orbit">
-            <div class="planet mercury"></div>
-            <div class="sun"></div>
+
+      <div class="saturn-orbit orbit">
+        <div class="planet saturn"></div>
+        <div class="jupiter-orbit orbit">
+          <div class="planet jupiter"></div>
+          <div class="mars-orbit orbit">
+            <div class="planet mars"></div>
+            <div class="earth-orbit orbit">
+              <div class="planet earth"></div>
+              <div class="venus-orbit orbit">
+                <div class="planet venus"></div>
+                <div class="mercury-orbit orbit">
+                  <div class="planet mercury"></div>
+                  <div class="sun"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
   </div>
 
 
@@ -90,7 +101,7 @@
           });
 
         // If service worker doesn't succeed in a reasonable amount of time,
-        // fallback to plaint <script> tag.
+        // fallback to plain <script> tag.
         setTimeout(() => {
           if (!scriptLoaded) {
             console.warn(
@@ -105,6 +116,12 @@
       loadMainDartJs();
     }
   </script>
+
+  <style>
+    body {
+      overflow: hidden;
+    }
+  </style>
 </body>
 
 </html>

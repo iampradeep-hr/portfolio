@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'data.dart';
 
 class About extends StatelessWidget {
-  About({
+  const About({
     Key? key,
     required this.fontSize,
   }) : super(key: key);
 
   final double fontSize;
-  final String gotAbout = about();
+  final String gotAbout =
+      "💻 I am a professional Android and Flutter Application Developer📱with expertise in Kotlin, Java, and Flutter framework. With a strong background in mobile app development and a drive for creating exceptional user experiences,🚀 I specialize in developing robust and innovative applications for various platforms.";
 
   @override
   Widget build(BuildContext context) {
@@ -17,12 +17,12 @@ class About extends StatelessWidget {
       child: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 30.0),
+            padding: const EdgeInsets.only(top: 20.0),
             child: Text(
               gotAbout,
+              softWrap: true,
               style: TextStyle(
                   fontFamily: 'SourceCodePro',
-                  letterSpacing: 2.5,
                   color: Theme.of(context).primaryColorLight,
                   fontSize: fontSize),
             ),

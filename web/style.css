@@ -2,144 +2,182 @@
 
 @keyframes spin {
 	from {
-	  transform: rotate(0);
-	}
-	to{
-	  transform: rotate(359deg);
-	}
-  }
-  
-  @keyframes spin3D {
-	from {
-	  transform: rotate3d(.5,.5,.5, 360deg);
-	}
-	to{
-	  transform: rotate3d(0deg);
-	}
-  }
-  
-  @keyframes configure-clockwise {
-	0% {
-	  transform: rotate(0);
-	}
-	25% {
-	  transform: rotate(90deg);
-	}
-	50% {
-	  transform: rotate(180deg);
-	}
-	75% {
-	  transform: rotate(270deg);
-	}
-	100% {
-	  transform: rotate(360deg);
-	}
-  }
-  
-  @keyframes configure-xclockwise {
-	0% {
-	  transform: rotate(45deg);
-	}
-	25% {
-	  transform: rotate(-45deg);
-	}
-	50% {
-	  transform: rotate(-135deg);
-	}
-	75% {
-	  transform: rotate(-225deg);
-	}
-	100% {
-	  transform: rotate(-315deg);
-	}
-  }
-  
-  @keyframes pulse {
-	from {
-	  opacity: 1;
-	  transform: scale(1);
+		transform: rotate(0);
 	}
 	to {
-	  opacity: .25;
-	  transform: scale(.75);
+		transform: rotate(359deg);
 	}
-  }
-  
+}
+
+@keyframes spin3D {
+	from {
+		transform: rotate3d(.5, .5, .5, 360deg);
+	}
+	to {
+		transform: rotate3d(0deg);
+	}
+}
+
+@keyframes configure-clockwise {
+	0% {
+		transform: rotate(0);
+	}
+	25% {
+		transform: rotate(90deg);
+	}
+	50% {
+		transform: rotate(180deg);
+	}
+	75% {
+		transform: rotate(270deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes configure-xclockwise {
+	0% {
+		transform: rotate(45deg);
+	}
+	25% {
+		transform: rotate(-45deg);
+	}
+	50% {
+		transform: rotate(-135deg);
+	}
+	75% {
+		transform: rotate(-225deg);
+	}
+	100% {
+		transform: rotate(-315deg);
+	}
+}
+
+@keyframes pulse {
+	from {
+		opacity: 1;
+		transform: scale(1);
+	}
+	to {
+		opacity: .25;
+		transform: scale(.75);
+	}
+}
+
 /* GRID STYLING */
 
 * {
 	box-sizing: border-box;
-  }
-  
-  body {
-	min-height: 100vh;
+}
+
+body {
 	background-color: #1d2630;
 	display: flex;
 	justify-content: center; /* Center horizontally */
 	align-items: center; /* Center vertically */
-	
-  }
-  
-  .solar-system {
+}
+
+.solar-system {
 	width: 250px;
 	height: 250px;
 	margin: 0 auto; /* Center horizontally */
 	display: flex;
 	justify-content: center;
 	align-items: center;
-  }
-  
-  .spinner-box {
+}
+
+.spinner-box {
 	width: 100%; /* Adjust width as needed */
 	height: 100vh; /* Adjust height as needed */
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	background-color: transparent;
-  }
-  
-  
-  .orbit {
+}
+
+.orbit {
 	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border: 1px solid #fafbfC;
+	border: 1px solid #fafbfc;
 	border-radius: 50%;
-  }
-  
-  .earth-orbit {
-	width: 165px;
-	height: 165px;
-	-webkit-animation: spin 12s linear 0s infinite;
-  }
-  
-  .venus-orbit {
+}
+
+
+.saturn-orbit {
+	width: 240px;
+	height: 240px;
+	animation: spin 19s linear 0s infinite;
+}
+.jupiter-orbit {
+	width: 210px;
+	height: 210px;
+	animation: spin 17s linear 0s infinite;
+}
+.mars-orbit {
+	width: 180px;
+	height: 180px;
+	animation: spin 15s linear 0s infinite;
+}
+
+.earth-orbit {
+	width: 150px;
+	height: 150px;
+	animation: spin 12s linear 0s infinite;
+}
+
+.venus-orbit {
 	width: 120px;
 	height: 120px;
-	-webkit-animation: spin 7.4s linear 0s infinite;
-  }
-  
-  .mercury-orbit {
+	animation: spin 7.4s linear 0s infinite;
+}
+
+.mercury-orbit {
 	width: 90px;
 	height: 90px;
-	-webkit-animation: spin 3s linear 0s infinite;
-  }
-  
-  .planet {
+	animation: spin 3s linear 0s infinite;
+}
+
+.planet {
 	position: absolute;
 	top: -5px;
 	width: 10px;
 	height: 10px;
 	border-radius: 50%;
-	background-color: #3f9ff9;
-  }
-  
-  .sun {
+	background-color: #3fd4f9; /* Earth color */
+}
+
+.sun {
 	width: 35px;
 	height: 35px;
 	border-radius: 50%;
-	background-color: #001eff;
-  }
-  
-  
+	background-color: #ff7b00; /* Sun color */
+}
+
+.mercury {
+	background-color: #d6d6d6;
+}
+
+.venus {
+	background-color: #f6b44d;
+}
+
+.earth {
+	background-color: #00ccff;
+}
+
+.mars {
+	background-color: #f95738;
+}
+
+.jupiter {
+	background-color: #ffc061;
+}
+
+.saturn {
+	background-color: #ffea9d;
+}
+
+

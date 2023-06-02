@@ -22,9 +22,9 @@ class TitleBar extends StatelessWidget {
         title,
         style: TextStyle(
             fontFamily: 'SourceCodePro',
-            letterSpacing: 10.5,
+            letterSpacing: 7,
             color: Theme.of(context).primaryColorLight,
-            fontSize: 20),
+            fontSize: 25),
       ),
     );
   }

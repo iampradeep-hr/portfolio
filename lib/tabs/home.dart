@@ -36,90 +36,98 @@ class _HomePageState extends State<HomePage> {
     final double width = MediaQuery.of(context).size.width;
     final double height = MediaQuery.of(context).size.height;
     return Padding(
-      padding: EdgeInsets.only(bottom: height * 0.1),
-      child: SizedBox(
-        child: LayoutBuilder(
-            builder: (BuildContext context, BoxConstraints constraints) {
-          if (constraints.maxWidth < 1000) {
-            return Padding(
-              padding: EdgeInsets.symmetric(horizontal: width * 0.024),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.only(top: height * 0.03),
-                    child: const Introduction(
-                        word: "Hi, नमस्ते(Namaste), I'm", textScaleFactor: 2.5),
-                  ),
-                  MyName(
-                    isMobile: true,
-                    context: context,
-                  ),
-                  Designation(isMobile: true, context: context),
-                  SocialMediaBar(
-                    height: height,
-                  ),
-                  const About(fontSize: 20),
-                  Padding(
-                    padding: EdgeInsets.only(bottom: height * 0.029),
-                    child: OverflowBar(
-                      children: [
-                        Resume(
-                          width: 0,
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            );
-          } else {
-            return Padding(
-              padding:
-                  EdgeInsets.only(top: height * 0.03, bottom: height * 0.07),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: width * 0.032),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Introduction(
+        padding: EdgeInsets.only(bottom: height * 0.1),
+        child: SizedBox(
+          child: LayoutBuilder(
+              builder: (BuildContext context, BoxConstraints constraints) {
+            if (constraints.maxWidth < 1000) {
+              return Padding(
+                  padding: EdgeInsets.symmetric(horizontal: width * 0.024),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(top: height * 0.03),
+                        child: const Introduction(
                             word: "Hi, नमस्ते(Namaste), I'm",
-                            textScaleFactor: 3.5),
-                        FittedBox(
-                            fit: BoxFit.cover,
-                            child: MyName(
-                              isMobile: false,
-                              context: context,
-                            )),
-                        Designation(isMobile: false, context: context),
-                        SocialMediaBar(
-                          height: height,
+                            textScaleFactor: 2.5),
+                      ),
+                      MyName(
+                        isMobile: true,
+                        context: context,
+                      ),
+                      Designation(isMobile: true, context: context),
+                      SocialMediaBar(
+                        height: height,
+                      ),
+                      const About(fontSize: 20),
+                      Padding(
+                        padding: EdgeInsets.only(bottom: height * 0.029),
+                        child: OverflowBar(
+                          children: [
+                            Resume(
+                              width: 0,
+                            ),
+                          ],
                         ),
-                        const About(fontSize: 25),
-                        Padding(
-                          padding: EdgeInsets.only(bottom: height * 0.026),
-                          child: Row(
-                            children: [
-                              Resume(
-                                width: width,
-                              ),
-                            ],
+                      ).zoom(
+                          loop: true,
+                          duration: const Duration(milliseconds: 800)),
+                    ],
+                  ).fadeIn(
+                      variant: NextFadeInVariant.fadeInRight,
+                      loop: true,
+                      duration: const Duration(milliseconds: 800)));
+            } else {
+              return Padding(
+                padding:
+                    EdgeInsets.only(top: height * 0.03, bottom: height * 0.07),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: width * 0.032),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Introduction(
+                              word: "Hi, नमस्ते(Namaste), I'm",
+                              textScaleFactor: 3.5),
+                          FittedBox(
+                              fit: BoxFit.cover,
+                              child: MyName(
+                                isMobile: false,
+                                context: context,
+                              )),
+                          Designation(isMobile: false, context: context),
+                          SocialMediaBar(
+                            height: height,
                           ),
-                        ),
-                      ],
+                          const About(fontSize: 25),
+                          Padding(
+                            padding: EdgeInsets.only(bottom: height * 0.026),
+                            child: Row(
+                              children: [
+                                Resume(
+                                  width: width,
+                                ).zoom(
+                                    loop: true,
+                                    duration:
+                                        const Duration(milliseconds: 800)),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                ],
-              ),
-            );
-          }
-        }),
-      ).fadeIn(
-          variant: NextFadeInVariant.fadeInRight,
-          duration: const Duration(milliseconds: 800)),
-    );
+                  ],
+                ).fadeIn(
+                    variant: NextFadeInVariant.fadeInRight,
+                    loop: true,
+                    duration: const Duration(milliseconds: 800)),
+              );
+            }
+          }),
+        ));
   }
 }

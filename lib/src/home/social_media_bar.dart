@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 
 import '../html_open_link.dart';
-import 'data.dart';
 
 class SocialMediaBar extends StatelessWidget {
   SocialMediaBar({Key? key, required this.height}) : super(key: key);
-  final List<List<String>> data = socialMedia();
+  final List<List<String>> data = [
+    ["https://github.com/iampradeep-hr/", "github"],
+    ["https://www.linkedin.com/in/iampradeephr", "linkedin"],
+    ["mailto:iampradeephr@gmail.com", "email"],
+    ["https://www.instagram.com/iampradeephr/", "instagram"]
+  ];
   final double height;
 
   @override
@@ -30,11 +34,10 @@ class SocialMediaBar extends StatelessWidget {
               return IconButton(
                   iconSize: 50.0,
                   hoverColor: Colors.transparent,
-                  icon:SocialMediaButton(
-                          image: 'assets/home/constant/${data[i][1]}.png',
-                          link: data[i][0],
-                          height: height),
-                      
+                  icon: SocialMediaButton(
+                      image: 'assets/home/constant/${data[i][1]}.png',
+                      link: data[i][0],
+                      height: height),
                   onPressed: () {
                     htmlOpenLink(data[i][0]);
                   });

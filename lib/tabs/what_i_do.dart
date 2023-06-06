@@ -68,7 +68,6 @@ class WhatIdo extends StatelessWidget {
                             width: 300,
                             height: 400,
                           ).fadeIn(
-                            variant: NextFadeInVariant.fadeInLeft,
                             duration: const Duration(milliseconds: 800),
                           ),
                           Column(
@@ -125,8 +124,8 @@ class WhatIdo extends StatelessWidget {
                             ),
                           ),
                         ),
-                      ).zoom(
-                        variant: NextZoomVariant.zoomIn,
+                      ).slide(
+                        variant: NextSlideVariant.slideInBottom,
                         duration: const Duration(milliseconds: 800),
                       ),
                     ),
@@ -195,8 +194,7 @@ class WhatIdo extends StatelessWidget {
                           (int i) => Padding(
                             padding: const EdgeInsets.only(bottom: 20.0),
                             child: Row(
-                              mainAxisAlignment:
-                                  MainAxisAlignment.spaceEvenly,
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: List.generate(
                                 (data[1].length - storage - 1) >= 8
                                     ? 8
@@ -213,9 +211,8 @@ class WhatIdo extends StatelessWidget {
                             ),
                           ),
                         ),
-                      ).zoom(
-                        variant: NextZoomVariant.zoomIn,
-                        loop: true,
+                      ).fadeIn(
+                        variant: NextFadeInVariant.fadeInTop,
                         duration: const Duration(milliseconds: 800),
                       ),
                     ),

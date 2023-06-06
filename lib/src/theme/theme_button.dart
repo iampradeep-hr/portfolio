@@ -17,10 +17,7 @@ class ThemeButtonState extends State<ThemeButton> {
       splashColor: Colors.transparent,
       highlightColor: Colors.transparent,
       color: Theme.of(context).primaryColorLight,
-      onPressed: () {
-        currentTheme.toggleTheme();
-        setState(() {});
-      },
+      onPressed: () {},
       icon: currentTheme.currentTheme == ThemeMode.dark
           ? const Icon(Icons.wb_sunny)
           : const Icon(Icons.nightlight),

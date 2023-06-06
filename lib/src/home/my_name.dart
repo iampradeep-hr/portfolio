@@ -21,7 +21,7 @@ class MyName extends StatelessWidget {
                 child: FittedBox(
                   fit: BoxFit.cover,
                   child: Text(
-                    "Pradeep HR",
+                    'Pradeep HR',
                     textScaleFactor: 4.5,
                     style: TextStyle(
                       fontFamily: 'FjallaOne',
@@ -31,7 +31,7 @@ class MyName extends StatelessWidget {
                   ),
                 ),
               )
-            : Text("Pradeep HR",
+            : Text('Pradeep HR',
                 textScaleFactor: 7,
                 style: TextStyle(
                   fontFamily: 'FjallaOne',

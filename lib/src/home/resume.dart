@@ -18,7 +18,7 @@ class Resume extends StatelessWidget {
         padding: EdgeInsets.only(right: width * 0.019),
         child: FilledButton(
             onPressed: () => htmlOpenLink(
-                "https://docs.google.com/document/d/1t9o8oOG6_pYX7FwFKyXfQ-k3LJuOpEdaCL7bXxl5anY/edit?usp=sharing/export?format=pdf"),
+                'https://docs.google.com/document/d/1t9o8oOG6_pYX7FwFKyXfQ-k3LJuOpEdaCL7bXxl5anY/edit?usp=sharing/export?format=pdf'),
             child: CustomText(
                 text: 'MY RESUME',
                 fontSize: 20,

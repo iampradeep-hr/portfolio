@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../custom/custom_text.dart';
-import 'data.dart';
+
 
 class Designation extends StatelessWidget {
   Designation({

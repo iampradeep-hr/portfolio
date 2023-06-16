@@ -5,16 +5,16 @@ import '../html_open_link.dart';
 import '../theme/config.dart';
 
 class ExperienceCard extends StatefulWidget {
-  const ExperienceCard(
-      {Key? key,
-      required this.image,
-      required this.title,
-      required this.desc,
-      required this.period,
-      required this.role,
-      required this.isMobile,
-      required this.link})
-      : super(key: key);
+  const ExperienceCard({
+    Key? key,
+    required this.image,
+    required this.title,
+    required this.desc,
+    required this.period,
+    required this.role,
+    required this.isMobile,
+    required this.link,
+  }) : super(key: key);
 
   final String image, title, desc, period, role, link;
   final bool isMobile;
@@ -29,12 +29,12 @@ class _ExperienceCardState extends State<ExperienceCard> {
     final double width = MediaQuery.of(context).size.width;
     final double height = MediaQuery.of(context).size.height;
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         boxShadow: [
           BoxShadow(
             color: Colors.black45,
             blurRadius: 10.0,
-            offset: const Offset(8, 12),
+            offset: Offset(8, 12),
           ),
         ],
       ),
@@ -51,14 +51,19 @@ class _ExperienceCardState extends State<ExperienceCard> {
           padding: const EdgeInsets.only(top: 5.0),
           width: !widget.isMobile ? width * 0.28 : width,
           decoration: BoxDecoration(
-            color: Theme.of(context).scaffoldBackgroundColor,
             borderRadius: BorderRadius.circular(5.0),
+            border: Border.all(
+              color: Colors.white.withOpacity(0.5),
+              width: 2,
+            ),
           ),
           child: Column(
             children: [
               Image.asset(
                 'assets/experience/${widget.image}',
-                fit: BoxFit.cover,
+                fit: BoxFit.contain,
+                width: 200,
+                height: 200,
               ),
               Container(
                 alignment: Alignment.topCenter,

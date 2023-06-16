@@ -16,7 +16,7 @@ class Education extends StatelessWidget {
       'ruas.jpg'
     ],
     [
-      'Yashaswi Pu\nCollege, India',
+      'Yashaswi PU\nCollege, India',
       'Gauribidanur',
       '2018 - 2020',
       'Physics, Chemistry, Mathematics, Biology',

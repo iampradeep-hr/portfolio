@@ -6,14 +6,32 @@ import '../src/nav_bar/title_bar.dart';
 class Experience extends StatelessWidget {
   Experience({Key? key}) : super(key: key);
 
-  final List<List<String>> data = [[
-    'SayHomes',
-    'Freelance',
-    'March 2023 Present',
-    'Flutter Developer',
-    'sayhomes.png',
-    'https://sayhomes.co.in'
-  ]];
+  final List<List<String>> data = [
+    [
+      'SayHomes',
+      'Freelance',
+      'March 2023 Present',
+      'Flutter Developer',
+      'sayhomes.png',
+      'https://sayhomes.co.in'
+    ],
+    [
+      'Pulso',
+      'Freelance',
+      'August 2022 - December 2022',
+      'Android Developer',
+      'pulso.jpg',
+      'https://pradeephr.web.app'
+    ],
+    [
+      'Blue Planet Infosolutions',
+      'Intern',
+      'December 2021 - July 2022',
+      'Android Developer',
+      'blueplanet.jpeg',
+      'https://drive.google.com/file/d/1g2Dumcee2AO8cDf0REKIniCkTUWiqsGH/view?usp=sharing'
+    ]
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -64,7 +82,7 @@ class Experience extends StatelessWidget {
                         period: data[index + i * 3][2],
                         desc: data[index + i * 3][3],
                         isMobile: false,
-                         link: data[i][5],
+                        link: data[index +i * 3][5],
                       );
                     }),
                   ),

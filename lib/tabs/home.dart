@@ -66,7 +66,7 @@ class _HomePageState extends State<HomePage> {
                       Padding(
                         padding: EdgeInsets.only(bottom: height * 0.029),
                         child: OverflowBar(
-                          children: [
+                          children: const [
                             Resume(
                               width: 0,
                             ),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../src/education/card.dart';
 import '../src/nav_bar/title_bar.dart';
 

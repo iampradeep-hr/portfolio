@@ -15,6 +15,22 @@ class Experience extends StatelessWidget {
       'sayhomes.png',
       'https://sayhomes.co.in'
     ],
+     [
+      'Google Developer Student Clubs',
+      'Android core member',
+      'April 2022 - Present',
+      'Helped in organizing and conducting technical workshops,\nand informative webinars for community members.',
+      'GDSC.png',
+      'https://gdsc.community.dev/ramaiah-university-of-applied-sciences-bengaluru/'
+    ],
+    [
+      'Open Source\nContributor',
+      'Oppia Foundation',
+      'asfd',
+      'Android App',
+      'oppia.jpg',
+      'https://github.com/iampradeep-hr'
+    ],
     [
       'Pulso',
       'Freelance',
@@ -24,13 +40,13 @@ class Experience extends StatelessWidget {
       'https://pradeephr.web.app'
     ],
     [
-      'Blue Planet Infosolutions',
+      'Blue Planet Infosolutions pvt ltd\nIndia',
       'Intern',
       'December 2021 - July 2022',
       'Android Developer',
       'blueplanet.jpeg',
       'https://drive.google.com/file/d/1g2Dumcee2AO8cDf0REKIniCkTUWiqsGH/view?usp=sharing'
-    ]
+    ],
   ];
 
   @override
@@ -82,7 +98,7 @@ class Experience extends StatelessWidget {
                         period: data[index + i * 3][2],
                         desc: data[index + i * 3][3],
                         isMobile: false,
-                        link: data[index +i * 3][5],
+                        link: data[index + i * 3][5],
                       );
                     }),
                   ),

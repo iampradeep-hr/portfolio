@@ -38,10 +38,6 @@ class _ExperienceCardState extends State<ExperienceCard> {
           ),
         ],
       ),
-      padding: EdgeInsets.only(
-        top: height * 0.01,
-        bottom: height * 0.01,
-      ),
       child: InkWell(
         onTap: () {
           htmlOpenLink(widget.link);

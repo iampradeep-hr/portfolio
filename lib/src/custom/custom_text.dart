@@ -23,7 +23,7 @@ class CustomText extends StatelessWidget {
           letterSpacing: 2,
           fontSize: fontSize,
           color: color,
-          fontWeight: FontWeight.w500,
+          fontWeight: FontWeight.bold,
         ));
   }
 }

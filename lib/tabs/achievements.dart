@@ -1,13 +1,21 @@
 import 'package:flutter/material.dart';
 
 import '../src/achievements/card.dart';
-import '../src/achievements/data.dart';
 import '../src/nav_bar/title_bar.dart';
 
 class Achievements extends StatelessWidget {
   Achievements({Key? key}) : super(key: key);
 
-  final List<List<String>> data = achievements();
+  final List<List<String>> data = [
+    [
+      '1st place winner at\n"The Engineer Hackathon-2022"\nheld at NITK Surathkal. Showcased exceptional skills, creativity,\nand problem-solving abilities, solidifying our position as leaders in engineering innovation.',
+      'https://drive.google.com/file/d/18k1YIjtQ6QfdyHVBLfMCc-NWXJQJ5X7i/view?usp=sharing'
+    ],
+    [
+      'Won the CompeteNCompose Hackathon! Collaborated with talented developers from 50+ GDSCs in India, leveraging Kotlin and Compose framework to create innovative Android applications. Grateful for the opportunity and excited for future endeavors! #HackathonChampion #KotlinCompose',
+      'https://drive.google.com/file/d/1wO-QXXlKW-rGLVBR9pc6y6Dl8wf-X0CM/view?usp=drive_link'
+    ]
+  ];
 
   @override
   Widget build(BuildContext context) {

@@ -46,8 +46,6 @@ class _HomePageState extends State<HomePage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      // Left message card in neon theme
-
                       Padding(
                         padding: EdgeInsets.only(top: height * 0.03),
                         child: const Introduction(

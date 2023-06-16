@@ -13,17 +13,17 @@ class Designation extends StatelessWidget {
   final bool isMobile;
   final BuildContext context;
   final List<String> data = [
-    "CS Undergrad",
-    "Android",
-    "Flutter",
-    "Spring Boot",
-    "Java",
-    "Kotlin",
-    "Dart",
-    "Firebase",
-    "MySql",
-    "MongoDB",
-    "Cloud"
+    'CS Undergrad',
+    'Android',
+    'Flutter',
+    'Spring Boot',
+    'Java',
+    'Kotlin',
+    'Dart',
+    'Firebase',
+    'MySql',
+    'MongoDB',
+    'Cloud'
   ];
 
   @override

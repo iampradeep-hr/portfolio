@@ -36,7 +36,7 @@ class _UnderlinedButtonState extends State<UnderlinedButton> {
       hoverColor: Colors.transparent,
       onTap: () => scroll.scrollTo(
           index: widget.tabNumber,
-          curve: Curves.fastLinearToSlowEaseIn,
+          curve: Curves.linearToEaseOut,
           duration: const Duration(milliseconds: 1000)),
       onHover: (bool value) => setState(() => _isHover = value),
       child: SizedBox(

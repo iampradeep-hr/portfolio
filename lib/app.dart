@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 import 'src/nav_bar/nav_bar.dart';
-import 'src/theme/theme_button.dart';
 import 'tabs/tabs.dart';
 
 class App extends StatelessWidget {
@@ -15,11 +14,6 @@ class App extends StatelessWidget {
     return LayoutBuilder(builder: (context, constraints) {
       if (constraints.maxWidth < 1000) {
         return Scaffold(
-          floatingActionButton: FloatingActionButton(
-            onPressed: () {},
-            backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-            child: const ThemeButton(),
-          ),
           body: ScrollablePositionedList.builder(
               physics: const ScrollPhysics(),
               shrinkWrap: true,

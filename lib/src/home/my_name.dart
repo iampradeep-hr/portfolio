@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class MyName extends StatelessWidget {
-  MyName({
+  const MyName({
     Key? key,
     required this.isMobile,
     required this.context,

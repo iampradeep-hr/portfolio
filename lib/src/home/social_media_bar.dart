@@ -5,10 +5,10 @@ import '../html_open_link.dart';
 class SocialMediaBar extends StatelessWidget {
   SocialMediaBar({Key? key, required this.height}) : super(key: key);
   final List<List<String>> data = [
-    ["https://github.com/iampradeep-hr/", "github"],
-    ["https://www.linkedin.com/in/iampradeephr", "linkedin"],
-    ["mailto:iampradeephr@gmail.com", "email"],
-    ["https://www.instagram.com/iampradeephr/", "instagram"]
+    ['https://github.com/iampradeep-hr/', 'github'],
+    ['https://www.linkedin.com/in/iampradeephr', 'linkedin'],
+    ['mailto:iampradeephr@gmail.com', 'email'],
+    ['https://www.instagram.com/iampradeephr/', 'instagram']
   ];
   final double height;
 

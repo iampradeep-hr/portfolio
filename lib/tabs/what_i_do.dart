@@ -3,6 +3,7 @@ import 'package:flutter_next/constants/enums.dart';
 import 'package:flutter_next/extensions/animation_extension.dart';
 import '../src/custom/custom_text.dart';
 import '../src/nav_bar/title_bar.dart';
+import '../src/neon.dart';
 import '../src/whatIDo/progress.dart';
 
 class WhatIdo extends StatelessWidget {
@@ -63,11 +64,19 @@ class WhatIdo extends StatelessWidget {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Image.asset(
-                            'assets/what_i_do/constants/ar_vr.png',
-                            width: 300,
-                            height: 400,
-                          ).fadeIn(
+                          Stack(children: [
+                            NeonPoint(
+                              lightBlurRadius: 150,
+                              lightSpreadRadius: 150,
+                              pointColor: Colors.blue,
+                              spreadColor: Colors.blueAccent.shade200,
+                            ),
+                            Image.asset(
+                              'assets/what_i_do/constants/ar_vr.png',
+                              width: 300,
+                              height: 400,
+                            )
+                          ]).fadeIn(
                             duration: const Duration(milliseconds: 800),
                           ),
                           Column(
@@ -124,8 +133,8 @@ class WhatIdo extends StatelessWidget {
                             ),
                           ),
                         ),
-                      ).slide(
-                        variant: NextSlideVariant.slideInBottom,
+                      ).fadeIn(
+                        variant: NextFadeInVariant.fadeInTop,
                         duration: const Duration(milliseconds: 800),
                       ),
                     ),
@@ -137,7 +146,7 @@ class WhatIdo extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.fromLTRB(20, 10, 20, 20),
+                      padding: const EdgeInsets.fromLTRB(70, 10, 70, 20),
                       child: CustomText(
                         text: '⚡ I have a good proficiency in:',
                         fontSize: 35,
@@ -165,12 +174,19 @@ class WhatIdo extends StatelessWidget {
                             variant: NextFadeInVariant.fadeInRight,
                             duration: const Duration(milliseconds: 800),
                           ),
-                          Image.asset(
-                            'assets/what_i_do/constants/ar_vr.png',
-                            width: 400,
-                            height: 400,
-                          ).fadeIn(
-                            variant: NextFadeInVariant.fadeInLeft,
+                          Stack(children: [
+                            NeonPoint(
+                              lightBlurRadius: 150,
+                              lightSpreadRadius: 100,
+                              pointColor: Colors.blue,
+                              spreadColor: Colors.blueAccent.shade200,
+                            ),
+                            Image.asset(
+                              'assets/what_i_do/constants/ar_vr.png',
+                              width: 300,
+                              height: 400,
+                            )
+                          ]).fadeIn(
                             duration: const Duration(milliseconds: 800),
                           ),
                         ],

@@ -59,32 +59,7 @@
             "Git--80"
         ]
     },
-    "education": {
-        "1": {
-            "institute": "MS Ramaiah University of Applied Sciences",
-            "location": "Bangalore",
-            "years": "2020 - 2024",
-            "description": "B.Tech in CSE",
-            "grades": "9.12 CGPA",
-            "logo": "ruas.jpg"
-        },
-        "2": {
-            "institute": "Yashaswi Pu College, India",
-            "location": "Gauribidanur",
-            "years": "2018 - 2020",
-            "description": "Physics, Chemistry, Mathematics, Computer Science",
-            "grades": "84%",
-            "logo": "yashaswi.jpg"
-        },
-        "3": {
-            "institute": "Adarsha Vidyalaya, RMSA, India",
-            "location": "Gauribidanur",
-            "years": "2018",
-            "description": "Secondary Education",
-            "grades": "94%",
-            "logo": "adarsha.jpg"
-        }
-    },
+    
     "experience": {
         "1": {
             "name": "SayHomes",

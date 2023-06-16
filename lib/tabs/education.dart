@@ -1,13 +1,37 @@
 import 'package:flutter/material.dart';
 
 import '../src/education/card.dart';
-import '../src/education/data.dart';
 import '../src/nav_bar/title_bar.dart';
 
 class Education extends StatelessWidget {
   Education({Key? key}) : super(key: key);
 
-  final List<List<String>> data = education();
+  final List<List<String>> data = [
+    [
+      'MS Ramaiah University\nof Applied Sciences',
+      'Bangalore',
+      '2020 - 2024',
+      'B.Tech in CSE',
+      '9.12 CGPA',
+      'ruas.jpg'
+    ],
+    [
+      'Yashaswi Pu\nCollege, India',
+      'Gauribidanur',
+      '2018 - 2020',
+      'Physics, Chemistry, Mathematics, Biology',
+      '86.2%',
+      'yashaswi.jpg'
+    ],
+    [
+      'Adarsha Vidyalaya\nRMSA, India',
+      'Gauribidanur',
+      '2018',
+      'Secondary Education',
+      '91.2%',
+      'adarsha.jpg'
+    ],
+  ];
 
   @override
   Widget build(BuildContext context) {

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_next/constants/enums.dart';
 import 'package:flutter_next/extensions/animation_extension.dart';
 
-import '../theme/theme_button.dart';
+
 import 'nav_bar_btn.dart';
 
 //The top Nav Bar
@@ -57,10 +57,6 @@ class NavBar extends StatelessWidget {
               tabNumber: 6,
               btnNumber: ' 06. ',
               btnName: 'Contact Me'),
-          Visibility(
-            visible: isDarkModeBtnVisible,
-            child: const ThemeButton(),
-          )
         ],
       ),
     ).fadeIn(

@@ -76,11 +76,11 @@ class NeonContainer extends StatelessWidget {
 class NeonSearchBar extends StatelessWidget {
   const NeonSearchBar({
     Key? key,
-    this.hint = "Search",
+    this.hint = 'Search',
     this.icon = Icons.search,
     this.onSearchChanged,
     this.onSearchTap,
-    this.padding = const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
+    this.padding = const EdgeInsets.symmetric(horizontal: 20),
     this.borderRadius = const BorderRadius.all(Radius.circular(10)),
     this.backgroundColor = Colors.black38,
     this.hintColor = Colors.white,
@@ -153,11 +153,10 @@ class NeonSearchBar extends StatelessWidget {
       child: Row(
         children: [
           Flexible(
-            flex: 1,
             child: TextField(
               style: TextStyle(
                   color: Colors.white,
-                  fontSize: (fontSize + (fontSize * 0.3)),
+                  fontSize: fontSize + (fontSize * 0.3),
                   fontWeight: textFontWeight),
               onChanged: onSearchChanged,
               decoration: InputDecoration(
@@ -257,13 +256,14 @@ class NeonAddItemButton extends StatelessWidget {
               const SizedBox(
                 width: 5,
               ),
-              icon == null
-                  ? Container()
-                  : Icon(
-                      icon,
-                      size: iconSize,
-                      color: iconColor,
-                    )
+              if (icon == null)
+                Container()
+              else
+                Icon(
+                  icon,
+                  size: iconSize,
+                  color: iconColor,
+                )
             ],
           ),
         ),
@@ -354,8 +354,8 @@ class NeonRightMsgCard extends StatelessWidget {
 class NeonLeftMsgCard extends StatelessWidget {
   const NeonLeftMsgCard(
       {Key? key,
-      this.msg = "",
-      this.time = "",
+      this.msg = '',
+      this.time = '',
       this.backgroundColor = Colors.black45,
       this.borderColor = Colors.white,
       this.spreadColor = Colors.deepPurple,

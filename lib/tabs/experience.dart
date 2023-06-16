@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
 
 import '../src/experience/card.dart';
-import '../src/experience/data.dart';
 import '../src/nav_bar/title_bar.dart';
 
 class Experience extends StatelessWidget {
   Experience({Key? key}) : super(key: key);
 
-  final List<List<String>> data = experience();
+  final List<List<String>> data = [[
+    'SayHomes',
+    'Freelance',
+    'March 2023 Present',
+    'Flutter Developer',
+    'sayhomes.png',
+    'https://sayhomes.co.in'
+  ]];
 
   @override
   Widget build(BuildContext context) {
@@ -32,6 +38,7 @@ class Experience extends StatelessWidget {
                     period: data[i][2],
                     desc: data[i][3],
                     isMobile: true,
+                    link: data[i][5],
                   ),
                 );
               }),
@@ -57,6 +64,7 @@ class Experience extends StatelessWidget {
                         period: data[index + i * 3][2],
                         desc: data[index + i * 3][3],
                         isMobile: false,
+                         link: data[i][5],
                       );
                     }),
                   ),

@@ -8,7 +8,7 @@ class About extends StatelessWidget {
 
   final double fontSize;
   final String gotAbout =
-      "💻 I am a professional Android and Flutter Application Developer📱with expertise in Kotlin, Java, and Flutter framework. With a strong background in mobile app development and a drive for creating exceptional user experiences,🚀 I specialize in developing robust and innovative applications for various platforms.";
+      '💻 I am a professional Android and Flutter Application Developer📱with expertise in Kotlin, Java, and Flutter framework. With a strong background in mobile app development and a drive for creating exceptional user experiences,🚀 I specialize in developing robust and innovative applications for various platforms.';
 
   @override
   Widget build(BuildContext context) {

@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 
 import '../custom/custom_text.dart';
 import '../html_open_link.dart';
-import 'data.dart';
 
 class Resume extends StatelessWidget {
-  Resume({
+  const Resume({
     Key? key,
     required this.width,
   }) : super(key: key);
